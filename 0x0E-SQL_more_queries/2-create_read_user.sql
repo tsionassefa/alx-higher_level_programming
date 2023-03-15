@@ -4,4 +4,6 @@
 -- if usr nad dn already exisists script sholdn't fail
 CREATE IF EXISTS  DATABASE  hbtn_0d_2;
 CREATE USER IF EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
-GRANT SELECT ON hbtn_0d_2.table TO 'user_0d_2'@'host';
+GRANT SELECT
+ON hbtn_0d_2.*
+TO 'user_0d_2'@'host';
