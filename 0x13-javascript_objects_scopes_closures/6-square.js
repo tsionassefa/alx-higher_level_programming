@@ -1,4 +1,3 @@
-utable File  10 lines (10 sloc)  251 Bytes
 #!/usr/bin/node
 module.exports = class Square extends require('./5-square.js') {
   charPrint (c) {
