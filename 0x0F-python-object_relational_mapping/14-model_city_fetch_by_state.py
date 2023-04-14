@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-print all City objects
+ print all City object
 from the db.
 """
 
@@ -23,10 +23,10 @@ if __name__ == "__main__":
 
     ses = Session()
 
-    query = session.query(City, State).join(State)
+    query = ses.query(City, State).join(State)
 
-    for _i, _j in query.all():
-        print("{}: ({:d}) {}".format(_j.name, _i.id, _i.name))
+    for _c, _s in query.all():
+        print("{}: ({:d}) {}".format(_s.name, _c.id, _c.name))
 
     ses.commit()
     ses.close()
