@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
- print all City object
-from the db.
+This script prints all City objects
+from the database `hbtn_0e_14_usa`.
 """
 
 from sys import argv
@@ -18,15 +18,15 @@ if __name__ == "__main__":
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1], argv[2], argv[3])
-    eng = create_engine(db_uri)
-    Session = sessionmaker(bind=eng)
+    engine = create_engine(db_uri)
+    Session = sessionmaker(bind=engine)
 
-    ses = Session()
+    session = Session()
 
-    query = ses.query(City, State).join(State)
+    query = session.query(City, State).join(State)
 
     for _c, _s in query.all():
         print("{}: ({:d}) {}".format(_s.name, _c.id, _c.name))
 
-    ses.commit()
-    ses.close()
+    session.commit()
+    session.close()
