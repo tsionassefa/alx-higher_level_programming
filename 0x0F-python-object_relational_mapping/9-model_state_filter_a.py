@@ -23,5 +23,5 @@ if __name__ == "__main__":
 
     ses = Session()
 
-    for i in ses.query(State).filter(State.name.contains('a')):
-        print('{0}: {1}'.format(i.id, i.name))
+    for instance in ses.query(State).filter(State.name.contains('a')):
+        print('{0}: {1}'.format(instance.id, instance.name))
