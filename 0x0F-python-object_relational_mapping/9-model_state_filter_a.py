@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 list all State objects
-that contain the letter `a`
+that contain
 the letter `a`
 """
 
