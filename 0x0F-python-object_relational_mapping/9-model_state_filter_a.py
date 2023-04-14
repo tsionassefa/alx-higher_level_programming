@@ -21,7 +21,7 @@ if __name__ == "__main__":
     eng = create_engine(db_uri)
     Session = sessionmaker(bind=eng)
 
-    sesn = Session()
+    ses = Session()
 
     for instance in ses.query(State).filter(State.name.contains('a')):
         print('{0}: {1}'.format(instance.id, instance.name))
