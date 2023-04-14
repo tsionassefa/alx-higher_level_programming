@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """
-takes  an argument and
-displays all values in the states matches the argument
-from the database
+This script takes in an argument and
+displays all values in the states
+where `name` matches the argument
+from the database `hbtn_0e_0_usa`.
+This time the script is safe from
+MySQL injections!
 """
 
 import MySQLdb
@@ -11,7 +14,7 @@ from sys import argv
 if __name__ == '__main__':
     """
     Access to the database and get the states
-    
+    from the database.
     """
 
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
@@ -31,8 +34,8 @@ if __name__ == '__main__':
             'name': argv[4]
         })
 
-        rows = cur.fetchall()
+        row = cur.fetchall()
 
-    if rows is not None:
-        for row in rows:
-            print(row)
+    if row is not None:
+        for i in rows:
+            print(i)
