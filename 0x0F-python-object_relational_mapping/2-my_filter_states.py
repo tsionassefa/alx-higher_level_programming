@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-take an argument and display all values in the state
-were name matches to the argument
+This script takes in an argument and
+displays all values in the states
+where `name` matches the argument
+from the database `hbtn_0e_0_usa`.
 """
 
 import MySQLdb
@@ -10,7 +12,7 @@ from sys import argv
 if __name__ == '__main__':
     """
     Access to the database and get the states
-    
+    from the database.
     """
 
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
