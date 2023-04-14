@@ -34,8 +34,8 @@ if __name__ == '__main__':
             'name': argv[4]
         })
 
-        row = cur.fetchall()
+        rows = cur.fetchall()
 
-    if row is not None:
+    if rows is not None:
         for i in rows:
             print(i)
