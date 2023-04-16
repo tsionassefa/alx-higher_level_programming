@@ -10,12 +10,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == '__main__':
-    eng = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
-    Base.metadata.create_all(eng)
+    Base.metadata.create_all(engine)
 
-    Session = sessionmaker(bind=eng)
+    Session = sessionmaker(bind=engine)
     ses = Session()
 
     st = ses.query(State).outerjoin(City).order_by(State.id, City.id).all()
