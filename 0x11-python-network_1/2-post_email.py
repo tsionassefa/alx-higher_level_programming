@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+""" takes URL, email and  encodes the email """
 import urllib.parse
 import urllib.request
 import sys
