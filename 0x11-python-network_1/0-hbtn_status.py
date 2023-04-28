@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#a script that featches the content of url
+# a script that featches the content of url
 import urllib.request
 
 if __name__ == "__main__":
