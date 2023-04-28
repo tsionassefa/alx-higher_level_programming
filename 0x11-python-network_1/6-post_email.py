@@ -6,7 +6,7 @@ import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    val = {"email": sys.argv[2]}
+    value = {"email": sys.argv[2]}
 
-    req = requests.post(url, filee=val)
+    req = requests.post(url, data=value)
     print(req.text)
